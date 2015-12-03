@@ -9,7 +9,7 @@ Woowrap is a Wordpress plugin that uses the SASS @extend directive to assign boo
 -- Swapping the sidebar and main content position
 To swap the position of the sidebar and main content, simply add the following class to the body:
 
-```.sidebar-swap```
+"sidebar-swap"
 
 ## Installation
 
