@@ -1,0 +1,95 @@
+@import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+.woocommerce, .woocommerce-page {
+
+	// Sidebar
+	#sidebar {
+		@extend .col-sm-3;
+		@extend .col-sm-pull-9;
+		ul {
+			padding: 0;
+			list-style-type: none;
+			li {
+
+			}
+		}
+	}
+
+	table {
+		@extend .table;
+
+		// Cart Page
+		&.cart {
+			.actions {
+				.coupon {
+					@extend .col-sm-6;
+				}
+			}
+		}
+	}
+
+	// Cart
+	.cart-collaterals {
+		@extend .row;
+		.cart_totals {
+			@extend .col-sm-4;
+			@extend .col-sm-push-8;
+		}
+	}
+
+	#container {
+		@extend .col-sm-9;
+		@extend .col-sm-push-3;
+		#content {
+
+			// Single Product View
+			div.product {
+				// First Section of Single Product
+				.entry-summary {
+					@extend .col-sm-8;
+					.product_title {
+						margin-top: 0;
+					}
+				}
+				.images {
+					@extend .col-sm-4;
+				}
+
+				// Second Section of Single Product
+				.woocommerce-tabs {
+					@extend .col-sm-12;
+					.wc-tabs {
+						list-style-type: none; // Removes Bullets
+						padding: 0; // Removes default bootstrap padding on lists
+						li {
+							display: inline-block; // Display as tabbed
+						}
+					}
+				}
+			}
+
+			// Archive Product List
+			ul.products {
+				@extend .row;
+				padding: 0; // Removes default bootstrap padding on lists
+				list-style-type: none; // Removes Bullets
+				li.product {
+					@extend .col-sm-3; // Product List Column Width
+					img {
+						@extend .img-responsive; // Make Images Responsive
+					}
+				}
+			}
+		}
+	}
+
+	// Swap the sidebar on single view
+	&.sidebar-swap {
+		#sidebar {
+			@extend .col-sm-pull-0;
+		}
+		#container {
+			@extend .col-sm-push-0;
+		}
+	}
+}
