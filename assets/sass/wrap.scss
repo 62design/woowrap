@@ -2,6 +2,34 @@
 
 .woocommerce, .woocommerce-page {
 
+	// Forms and Inputs
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"],
+	select,
+	textarea {
+		@extend .form-control;
+	}
+
+	// Button Styles
+	.button,
+	.submit,
+	input[type="button"],
+	input[type="submit"] {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+	.submit {
+		@extend .btn;
+		@extend .btn-default;
+	}
+
+	// Breadcrumb
+	.woocommerce-breadcrumb {
+		@extend .breadcrumb;
+	}
+
 	// Sidebar
 	#sidebar {
 		@extend .col-sm-3;
@@ -42,6 +70,10 @@
 		@extend .col-sm-push-3;
 		#content {
 
+			.page-title {
+				@extend .col-sm-12;
+			}
+
 			// Single Product View
 			div.product {
 				// First Section of Single Product
@@ -70,7 +102,6 @@
 
 			// Archive Product List
 			ul.products {
-				@extend .row;
 				padding: 0; // Removes default bootstrap padding on lists
 				list-style-type: none; // Removes Bullets
 				li.product {

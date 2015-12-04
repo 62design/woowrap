@@ -30,6 +30,18 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	}
 	add_action('woocommerce_sidebar', 'after_content', 20);
 
+	function before_archive_description() {
+		echo '<div class="col-sm-12 oi">';
+	}
+	add_action('woocommerce_archive_description', 'before_archive_description', 1);
+	add_action('woocommerce_before_shop_loop', 'before_archive_description', 1);
+
+	function after_archive_description() {
+		echo '</div>';
+	}
+	add_action('woocommerce_archive_description', 'after_archive_description', 40);
+	add_action('woocommerce_before_shop_loop', 'after_archive_description', 40);
+
 }
 
 
