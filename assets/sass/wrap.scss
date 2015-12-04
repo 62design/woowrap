@@ -62,9 +62,6 @@
 		ul {
 			padding: 0;
 			list-style-type: none;
-			li {
-
-			}
 		}
 	}
 
@@ -87,8 +84,7 @@
 	}
 
 	#container {
-		@extend .col-sm-9;
-		@extend .col-sm-push-3;
+		@extend .col-sm-9, .col-sm-push-3;
 		#content {
 
 			.page-title {
