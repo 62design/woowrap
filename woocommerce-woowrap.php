@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Woocommerce Woowrap
  * Description: Wraps Woocommerce in Bootstrap classes using the SASS @extend directive.
- * Version: 0.1
+ * Version: 1.0.0
  * Author: Steve North (62 Design)
  * Author URI: http://62design.co.uk/
  **/
@@ -42,6 +42,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	add_action('woocommerce_archive_description', 'after_archive_description', 40);
 	add_action('woocommerce_before_shop_loop', 'after_archive_description', 40);
 
+	function clearfix_append() {
+		echo '<div class="clearfix"></div>';
+	}
 }
 
 

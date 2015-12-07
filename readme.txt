@@ -14,6 +14,8 @@ Woowrap is a Woocommerce extension that disables the default Woocommerce style a
 
 To swap the sidebar and main content, just add the class "sidebar-swap" to the body.
 
+Check out the GIT Repo: https://github.com/Steve62/woowrap
+
 == Installation ==
 1. Ensure Woocommerce is installed and activated
 2. Install and Activate Woowrap

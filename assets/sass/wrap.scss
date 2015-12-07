@@ -1,6 +1,10 @@
 @import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 .woocommerce-page {
+	// Hidden Items
+	.onsale {
+		display: none;
+	}
 
 	// Forms and Inputs
 	input[type="text"],
@@ -53,6 +57,7 @@
 	.stars {
 		a {
 			@extend .glyphicon, .glyphicon-star;
+			margin-right: 5px;
 		}
 	}
 
@@ -95,24 +100,51 @@
 			div.product {
 				// First Section of Single Product
 				.entry-summary {
-					@extend .col-sm-8;
+					@extend .col-sm-6;
 					.product_title {
 						margin-top: 0;
 					}
 				}
 				.images {
-					@extend .col-sm-4;
+					@extend .col-sm-6;
+					// Needs fixing and all thumbnail column widths added.
+					.thumbnails {
+						@extend .row;
+						margin-right: -3px;
+						margin-left: -3px;
+						&.columns-3 {
+							a {
+								@extend .col-xs-3;
+								margin-top: 6px;
+								padding-left: 3px;
+								padding-right: 3px;
+								img {
+									@extend .img-responsive;
+									&:after {
+										content: " ";
+										clear: both;
+									}
+								}
+							}
+						}
+					}
+
 				}
 
 				// Second Section of Single Product
 				.woocommerce-tabs {
 					@extend .col-sm-12;
+					margin-top: 15px;
 					.wc-tabs {
+						@extend .nav, .nav-tabs;
 						list-style-type: none; // Removes Bullets
 						padding: 0; // Removes default bootstrap padding on lists
 						li {
 							display: inline-block; // Display as tabbed
 						}
+					}
+					.panel {
+						@extend .tab-content;
 					}
 				}
 			}
