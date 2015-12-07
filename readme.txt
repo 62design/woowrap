@@ -27,5 +27,8 @@ No need to include bootstrap as woowrap contains a minified version of bootstrap
 
 == Changelog ==
 
+= 1.1.0 =
+- Added bootstrap classes to checkout.
+
 = 1.0 =
 - Plugin Released.

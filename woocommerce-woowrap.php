@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Woocommerce Woowrap
  * Description: Wraps Woocommerce in Bootstrap classes using the SASS @extend directive.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Steve North (62 Design)
  * Author URI: http://62design.co.uk/
  **/
