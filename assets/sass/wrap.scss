@@ -88,6 +88,26 @@
 		}
 	}
 
+	// Checkout
+	.col2-set {
+		@extend .row;
+		.col-1,
+		.col-2 {
+			@extend .col-sm-6;
+		}
+	}
+	.woocommerce-checkout-review-order {
+
+		.shop_table,
+		#payment {
+			@extend .col-sm-6;
+			.payment_methods {
+				list-style-type: none;
+				padding: 0;
+			}
+		}
+	}
+
 	#container {
 		@extend .col-sm-9, .col-sm-push-3;
 		#content {

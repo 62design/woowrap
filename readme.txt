@@ -16,6 +16,9 @@ To swap the sidebar and main content, just add the class "sidebar-swap" to the b
 
 Check out the GIT Repo: https://github.com/Steve62/woowrap
 
+PLEASE NOTE:
+This plugin is intended for the use of WordPress developers to shorten the time used to develop woocommerce websites. Installing this plugin on a live site is NOT recommended!
+
 == Installation ==
 1. Ensure Woocommerce is installed and activated
 2. Install and Activate Woowrap
