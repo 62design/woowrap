@@ -27,6 +27,10 @@ No need to include bootstrap as woowrap contains a minified version of bootstrap
 
 == Changelog ==
 
+= 1.1.1 =
+- Fixed number of issues with padding.
+- Added classes for checkout.
+
 = 1.1.0 =
 - Added bootstrap classes to checkout.
 

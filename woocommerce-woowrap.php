@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Woocommerce Woowrap
  * Description: Wraps Woocommerce in Bootstrap classes using the SASS @extend directive.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Steve North (62 Design)
  * Author URI: http://62design.co.uk/
  **/
@@ -10,7 +10,7 @@
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
 	function woowrap() {
-		wp_enqueue_style( 'woowrap', plugin_dir_url( $file ) . 'woocommerce-woowrap/assets/css/woowrap.css' );
+		wp_enqueue_style( 'woowrap', plugin_dir_url( __FILE__ ) . 'assets/css/woowrap.css' );
 	}
 	add_action( 'wp_enqueue_scripts', 'woowrap' );
 
@@ -31,7 +31,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	add_action('woocommerce_sidebar', 'after_content', 20);
 
 	function before_archive_description() {
-		echo '<div class="col-sm-12 oi">';
+		echo '<div class="col-sm-12">';
 	}
 	add_action('woocommerce_archive_description', 'before_archive_description', 1);
 	add_action('woocommerce_before_shop_loop', 'before_archive_description', 1);

@@ -111,9 +111,13 @@
 	#container {
 		@extend .col-sm-9, .col-sm-push-3;
 		#content {
-
+			@extend .row;
 			.page-title {
 				@extend .col-sm-12;
+			}
+
+			.woocommerce-ordering {
+				margin-bottom: 15px;
 			}
 
 			// Single Product View
@@ -153,7 +157,7 @@
 
 				// Second Section of Single Product
 				.woocommerce-tabs {
-					@extend .col-sm-12;
+					@extend .col-xs-12;
 					margin-top: 15px;
 					.wc-tabs {
 						@extend .nav, .nav-tabs;
@@ -167,22 +171,60 @@
 						@extend .tab-content;
 					}
 				}
+
+				.related {
+					@extend .col-xs-12;
+					.products {
+						@extend .row;
+					}
+				}
 			}
+
 
 			// Archive Product List
 			ul.products {
 				padding: 0; // Removes default bootstrap padding on lists
 				list-style-type: none; // Removes Bullets
 				li.product {
-					@extend .col-sm-3; // Product List Column Width
+					@extend .col-xs-12, .col-sm-6, .col-md-3; // Product List Column Width
+					margin-bottom: 20px;
 					img {
 						@extend .img-responsive; // Make Images Responsive
+					}
+					.button {
+						display: block;
 					}
 				}
 			}
 		}
 	}
 
+	.woocommerce-billing-fields {
+		.form-row-first {
+			width: 48%;
+			float: left;
+		}
+		.form-row-last {
+			width: 48%;
+			float: right;
+		}
+	}
+
+	.clear {
+		@extend .clearfix;
+	}
+
+	.create-account {
+		.input-checkbox {
+			float: left;
+		}
+		.checkbox {
+			float:left;
+			margin-top: 0;
+			margin-left: 10px;
+			clear: right;
+		}
+	}
 	// Swap the sidebar on single view
 	&.sidebar-swap {
 		#sidebar {
